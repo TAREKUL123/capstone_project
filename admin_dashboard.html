@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>অনুশীলনী | অধ্যায় ১</title>
+  <link rel="stylesheet" href="admin_dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <script>
+    // যদি লগ ইন না করা থাকে, তাহলে admin login page এ পাঠাও
+    if (localStorage.getItem("isAdminLoggedIn") !== "true") {
+      window.location.href = "http://localhost/onusiloni/admin-login.html";
+    }
+  </script>
+  
+  
+  <!-- ✅ Navigation Bar -->
+  <nav class="navbar" id="mainNav">
+    <div class="logo">অনুশীলনী</div> 
+    <ul class="nav-links">
+      <li><a href="home.html">হোম</a></li>
+      <li class="dropdown">
+        <a href="#">অধ্যায়সমূহ ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="chapter1.html">অধ্যায় ১: রসায়নের পরিচিতি</a></li>
+          <li><a href="#">অধ্যায় ২: ল্যাব নিরাপত্তা</a></li>
+          <li><a href="#">অধ্যায় ৩: অ্যাসিড ও ক্ষার</a></li>
+          <li><a href="#">অধ্যায় ৪: রাসায়নিক বিক্রিয়া</a></li>
+          <li><a href="#">অধ্যায় ৫: পৃথকীকরণ কৌশল</a></li>
+          <li><a href="#">অধ্যায় ৬: পরিমাপ</a></li>
+          <li><a href="#">অধ্যায় ৭: গ্যাস সূত্র</a></li>
+          <li><a href="#">অধ্যায় ৮: পিএইচ পরীক্ষা</a></li>
+          <li><a href="#">অধ্যায় ৯: লবণ</a></li>
+          <li><a href="#">অধ্যায় ১০: বৈদ্যুত্রাপেক্ষ</a></li>
+          <li><a href="#">অধ্যায় ১১: জৈব রসায়ন</a></li>
+          <li><a href="#">অধ্যায় ১২: পুনরাবৃত্তি</a></li>
+        </ul>
+      </li>
+      <li><a href="#">অভিযোগ</a></li>
+      <li><a href="#">ব্লগ</a></li>
+      <li><a href="#">আমাদের সম্পর্কে</a></li>
+      <li><a href="#" id="text">লগইন</a></li>
+      <li><a href="#">অ্যাডমিন</a></li>
+    </ul>
+  </nav>
+
+  <div class="section">
+    <h2>🔹 রেজিস্টার্ড ইউজার তালিকা</h2>
+    <table id="registrationTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>নাম</th>
+          <th>Role</th>
+          <th>প্রতিষ্ঠান</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔸 অভিযোগ তালিকা</h2>
+    <table id="complaintTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Chapter</th>
+          <th>Topic</th>
+          <th>Experiment</th>
+          <th>Email</th>
+          <th>Complain</th>
+          <th>Status</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+<button onclick="logout()" class="logout-container logout-btn">Logout</button>
+
+
+<script>
+  function logout() {
+    localStorage.removeItem("isAdminLoggedIn");
+    window.location.href = "admin-login.html";
+  }
+</script>
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch("admin_dashboard.php")
+        .then(res => res.json())
+        .then(data => {
+          const regBody = document.querySelector("#registrationTable tbody");
+          data.registrations.forEach(r => {
+            const row = `<tr>
+              <td>${r.id}</td>
+              <td>${r.name}</td>
+              <td>${r.role}</td>
+              <td>${r.institution}</td>
+            </tr>`;
+            regBody.innerHTML += row;
+          });
+
+          const compBody = document.querySelector("#complaintTable tbody");
+          data.complaints.forEach(c => {
+            const row = `<tr>
+              <td>${c.id}</td>
+              <td>${c.chapter}</td>
+              <td>${c.topic}</td>
+              <td>${c.experiment}</td>
+              <td>${c.email}</td>
+              <td>${c.complain}</td>
+              <td>
+                <select id="status-${c.id}">
+                  <option value="new" ${c.status == "new" ? "selected" : ""}>New</option>
+                  <option value="pending" ${c.status == "pending" ? "selected" : ""}>Pending</option>
+                  <option value="resolved" ${c.status == "resolved" ? "selected" : ""}>Resolved</option>
+                </select>
+              </td>
+              <td><button onclick="updateStatus(${c.id})">Update</button></td>
+            </tr>`;
+            compBody.innerHTML += row;
+          });
+        })
+        .catch(err => {
+          alert("Data load failed!");
+          console.error(err);
+        });
+    });
+
+    function updateStatus(id) {
+      const status = document.getElementById(`status-${id}`).value;
+      fetch("http://localhost/onusiloni/update_status.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `id=${id}&status=${status}`
+      })
+        .then(res => res.text())
+        .then(msg => alert(msg))
+        .catch(err => alert("Update failed"));
+    }
+  </script>
+
+</body>
+</html>

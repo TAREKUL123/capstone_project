@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>অনুশীলনী | অধ্যায় ১</title>
+  <link rel="stylesheet" href="chapter1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <div class="loader-wrapper">
+    <div class="atom-loader">
+      <div class="ring ring1">
+        <div class="ball ball1"></div>
+      </div>
+      <div class="ring ring2">
+        <div class="ball ball2"></div>
+      </div>
+      <div class="ring ring3">
+        <div class="ball ball3"></div>
+      </div>
+      <div class="nucleus"></div>
+    </div>
+    <div class="loading-text">লোড হচ্ছে...</div>
+  </div>
+  
+  
+  <!-- ✅ Navigation Bar -->
+  <nav class="navbar" id="mainNav">
+    <div class="logo">অনুশীলনী</div> 
+    <ul class="nav-links">
+      <li><a href="home.html">হোম</a></li>
+      <li class="dropdown">
+        <a href="#">অধ্যায়সমূহ ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="chapter1.html">অধ্যায় ১: রসায়নের পরিচিতি</a></li>
+          <li><a href="#">অধ্যায় ২: ল্যাব নিরাপত্তা</a></li>
+          <li><a href="#">অধ্যায় ৩: অ্যাসিড ও ক্ষার</a></li>
+          <li><a href="#">অধ্যায় ৪: রাসায়নিক বিক্রিয়া</a></li>
+          <li><a href="#">অধ্যায় ৫: পৃথকীকরণ কৌশল</a></li>
+          <li><a href="#">অধ্যায় ৬: পরিমাপ</a></li>
+          <li><a href="#">অধ্যায় ৭: গ্যাস সূত্র</a></li>
+          <li><a href="#">অধ্যায় ৮: পিএইচ পরীক্ষা</a></li>
+          <li><a href="#">অধ্যায় ৯: লবণ</a></li>
+          <li><a href="#">অধ্যায় ১০: বৈদ্যুত্রাপেক্ষ</a></li>
+          <li><a href="#">অধ্যায় ১১: জৈব রসায়ন</a></li>
+          <li><a href="#">অধ্যায় ১২: পুনরাবৃত্তি</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="#">ব্লগ</a></li>
+      <li><a href="#">আমাদের সম্পর্কে</a></li>
+      <li><a href="submit_complain.html">অভিযোগ</a></li>
+      <li><a href="#" id="text">লগইন</a></li>
+      <li><a href="admin_dashboard.html">অ্যাডমিন</a></li>
+    </ul>
+  </nav>
+
+<section class="topic-section">
+  <br>
+  <br>
+  <br>
+  <br> <br>
+  <h1>অধ্যায় ১: রসায়নের পরিচিতি</h1> <br> 
+  <div class="cube-loader">
+    <div class="cube">
+      <div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+  <br> <br>
+  <h2>টপিক বেছে নিন</h2>
+  <div class="topic-grid">
+    <div class="topic-card" onclick="showExperiments('topic1')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="Understanding Matter">
+      <h3>পদার্থের ধারণা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic2')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="Atoms and Molecules">
+      <h3>পরমাণু ও অণু</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic3')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic4')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic5')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic6')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic7')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic8')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic9')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+    <div class="topic-card" onclick="showExperiments('topic10')">
+      <img src="http://localhost/onusiloni/vdo/download.jpg" alt="States of Matter">
+      <h3>পদার্থের অবস্থা</h3>
+    </div>
+  </div>
+</section>
+
+
+<br><br><br><h2 id="experiment-heading" >
+  প্রয়োগিক কার্যাবলীসমূহ (Experiments)
+</h2>
+ 
+
+<!-- এখানে এক্সপেরিমেন্ট কার্ডগুলো লোড হবে -->
+<div id="experimentGridContainer"></div>
+
+  <!-- Experiment Details Section -->
+  <section class="Experiment-details-section hidden" id="Experiment1">
+    <h2>এক্সপেরিমেন্ট ০১: ম্যাটার বুঝার উপায়</h2>
+    <p><strong>লক্ষ:</strong></p> <p>১। পদার্থের বৈশিষ্ট্যগুলো চিহ্নিত করতে পারা। </p>
+      ২। কঠিন, তরল ও গ্যাসীয় পদার্থের মধ্যে পার্থক্য করতে পারা। </p>
+      ৩। পদার্থের ভর ও আয়তন পরিমাপ করতে পারা। </p>
+      ৪। পদার্থের অবস্থার পরিবর্তন পর্যবেক্ষণ করতে পারা। </p>
+      ৫। দৈনন্দিন জীবনে পদার্থের বিভিন্ন ব্যবহার সম্পর্কে জানতে পারা। </p>
+    <p><strong>প্রয়োজনীয় পূর্বজ্ঞান (Prerequisites): </strong> </p> <p> ১। প্রাথমিক বিজ্ঞান সম্পর্কে ধারণা থাকতে হবে। </p>
+      ২। ভর, আয়তন এবং অবস্থার পরিবর্তন সম্পর্কিত মৌলিক ধারণা থাকতে হবে। </p>
+      ৩। পরিমাপের সাধারণ একক (যেমন: গ্রাম, কিলোগ্রাম, সেন্টিমিটার, লিটার) সম্পর্কে ধারণা থাকতে হবে। </p>
+      ৪। পর্যবেক্ষণ এবং ডেটা সংগ্রহের প্রাথমিক দক্ষতা থাকতে হবে। </p>
+      ৫। নিরাপত্তা সচেতনতা এবং পরীক্ষাগারে কাজ করার সাধারণ নিয়মাবলী সম্পর্কে ধারণা থাকতে হবে।</p>
+    <div class="video-container">
+      <iframe src="http://localhost/onusiloni/vdo/Rutherford.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment1.01">
+    <h2>এক্সপেরিমেন্ট ১.০১: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="http://localhost/onusiloni/vdo/Rutherford.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment1.02">
+    <h2>এক্সপেরিমেন্ট ১.০২: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="http://localhost/onusiloni/vdo/pH_test.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment1.03">
+    <h2>এক্সপেরিমেন্ট ১.০৩: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment2">
+    <h2>এক্সপেরিমেন্ট ০২: Atoms and Molecules</h2>
+    <p><strong>Objectives:</strong> Understand atoms and molecular structures.</p>
+    <p><strong>Prerequisites:</strong> Understanding Matter</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+    </div>
+   
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment2.01">
+    <h2>এক্সপেরিমেন্ট ২.০১: Atoms and Molecules</h2>
+    <p><strong>Objectives:</strong> Understand atoms and molecular structures.</p>
+    <p><strong>Prerequisites:</strong> Understanding Matter</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+ <a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment2.02">
+    <h2>এক্সপেরিমেন্ট ২.০২: Atoms and Molecules</h2>
+    <p><strong>Objectives:</strong> Understand atoms and molecular structures.</p>
+    <p><strong>Prerequisites:</strong> Understanding Matter</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment3">
+    <h2>এক্সপেরিমেন্ট ০৩: States of Matter</h2>
+    <p><strong>Objectives:</strong> Learn about solids, liquids, and gases.</p>
+    <p><strong>Prerequisites:</strong> Understanding Matter</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
+    </div>
+ 
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment4">
+    <h2>এক্সপেরিমেন্ট ০৪: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+  <section class="Experiment-details-section hidden" id="Experiment5"> 
+    <h2>এক্সপেরিমেন্ট ০৫: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+  <section class="Experiment-details-section hidden" id="Experiment6">
+    <h2>এক্সপেরিমেন্ট ০৬: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment7">
+    
+    <h2>এক্সপেরিমেন্ট ০৭: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment8">
+    <h2>এক্সপেরিমেন্ট ০৮: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+ <a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+  <section class="Experiment-details-section hidden" id="Experiment9">
+    <h2>এক্সপেরিমেন্ট ০৯: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+<a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section> 
+  <section class="Experiment-details-section hidden" id="Experiment10">
+    <h2>এক্সপেরিমেন্ট ১০: Understanding Matter</h2>
+    <p><strong>Objectives:</strong> Learn basic properties of matter.</p>
+    <p><strong>Prerequisites:</strong> None</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+    </div>
+ <a href="quiz.html"class="no-underline-link">
+    <button class="toggle-test" onclick="toggleTest(this)">Take Test</button>
+    </a>
+  </section>
+
+
+  <footer class="custom-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <a href="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbyNcCbsi6N1F_c4Qe7NloBz3BiaMGmLNQ8A&s" alt="Logo" class="footer-logo">
+        </a>
+        <p class="follow-text">যুক্ত থাকুন আমাদের সাথে...</p>
+        <div class="social-icons">
+          <a href=""><img src="http://localhost/onusiloni/vdo/fb.png" alt="Facebook"></a>
+          <a href=""><img src="http://localhost/onusiloni/vdo/yt.png" alt="YouTube"></a>
+          <a href=""><img src="http://localhost/onusiloni/vdo/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+  
+      <div class="footer-column">
+        <ul class="footer-links">
+          <li><a href="">আমাদের সম্পর্কে</a></li>
+          <li><a href="">আমাদের টিম</a></li>
+          <li><a href="">যোগাযোগ করুন</a></li>
+          <li><a href="">ভার্চুয়াল সিস্টেম</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <p>যোগাযোগ</p>
+        <p><ion-icon name="mail-outline"></ion-icon> 2002019.icte.ac.bd</p>
+      </div>
+    </div>
+  
+    <hr class="footer-divider">
+  
+    <div class="footer-credits">
+      <div><a href=""><img src="" alt="BDU" class="footer-partner-logo"></a></div>
+      <div>
+        <p>Capstone project by Tarekul Islam and Samiul Khan, Student, EDTECH, BDU.</p>
+        <p>Maintained by <a class="onushilon" href="">অনুশীলন</a></p>
+      </div>
+      <div><a href=""><img src="https://static.vecteezy.com/system/resources/previews/036/494/149/non_2x/education-technology-logo-vector.jpg" alt="" class="footer-partner-logo small"></a></div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; 2025 BANGLADESH Digital UNIVERSITY (BDU). All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="chapter1.js"></script>
+
+<!-- Floating AI Tutor -->
+<div id="aiTutorWidget">
+  <button id="aiTutorBtn" onclick="toggleAITutor()">💬</button>
+  <div id="aiTutorPopup">
+    <div class="popup-header">
+      <span>Your Intelligent Tutor</span>
+      <button onclick="toggleAITutor()">×</button>
+    </div>
+    <div class="popup-body">
+      <textarea id="userQuestion" placeholder="Ask your question..."></textarea>
+      <button onclick="askAI()">Ask</button>
+      <div id="aiAnswer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="ai_tutor.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="ai_tutor.css">
+
+
+</body>
+</html>

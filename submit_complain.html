@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>অভিযোগ ফর্ম</title>
+  <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    padding: 30px;
+    animation: fadeInBody 1s ease;
+  }
+
+  @keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .complain-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.8s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .complain-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2a3f54;
+    font-size: 26px;
+    position: relative;
+  }
+
+  .complain-box h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 15px;
+  }
+
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    background-color: #f9f9f9;
+  }
+
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    margin: 25px auto 0;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004080);
+    transform: scale(1.03);
+  }
+
+  .success-msg {
+    text-align: center;
+    color: green;
+    margin-top: 18px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .complain-box {
+      padding: 20px;
+    }
+    .submit-btn {
+      width: 100%;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <div class="complain-box">
+    <h2>অভিযোগ ফর্ম</h2>
+    <form id="complainForm">
+      <div class="form-group">
+        <label>অধ্যায়ের নাম (Chapter Name)</label>
+        <input type="text" name="chapter" required>
+      </div>
+      <div class="form-group">
+        <label>টপিকের নাম (Topic Name)</label>
+        <input type="text" name="topic" required>
+      </div>
+      <div class="form-group">
+        <label>পরীক্ষার নম্বর (Experiment No)</label>
+        <input type="text" name="experiment" required>
+      </div>
+      <div class="form-group">
+        <label>আপনার ইমেইল</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>অভিযোগ</label>
+        <textarea name="complain" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">জমা দিন</button>
+      <div id="responseMsg" class="success-msg"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("complainForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch("http://localhost/onusiloni/submit_complain.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("responseMsg").innerText = data;
+        document.getElementById("complainForm").reset();
+      })
+      .catch(err => {
+        document.getElementById("responseMsg").innerText = "সমস্যা হয়েছে!";
+        console.error(err);
+      });
+    });
+  </script>
+</body>
+</html>

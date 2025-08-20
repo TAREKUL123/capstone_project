@@ -1,0 +1,137 @@
+/* styles.css */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+    zoom: 1.1; /* Zoom in the whole page */
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #002147;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffc107;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffc107;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: white;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #004488;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  /* Login Box Styling */
+.flex.items-center.justify-center.py-20 {
+    background: linear-gradient(135deg, rgba(30,58,138,0.4), rgba(147,197,253,0.3));
+    backdrop-filter: blur(6px);
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .bg-white.shadow-lg.rounded-2xl.p-8.w-full.max-w-md {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bg-white.shadow-lg.rounded-2xl.p-8.w-full.max-w-md:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Input Field Enhancements */
+  input[type="text"],
+  input[type="password"] {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #cbd5e1;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Button Glow Effect */
+  button[type="submit"] {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(to right, #1e40af, #1d4ed8);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.6);
+  }
+/* Move login box significantly upward */
+.bg-white.shadow-lg.rounded-2xl.p-8.w-full.max-w-md {
+    margin-top: -200px;
+  }
+  
+    

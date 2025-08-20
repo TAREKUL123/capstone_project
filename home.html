@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChemLab | হোম</title>
+
+  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+</head>
+<body>
+
+  <div class="image-preloader" id="preloader">
+    <img src="http://localhost/onusiloni/vdo/image_processing20200121-15098-11bw59j.gif" alt="Loading...">
+  </div>
+  
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="mainNav">
+    <div class="logo">অনুশীলনী</div> 
+    <ul class="nav-links">
+      <li><a href="home.html">হোম</a></li>
+      <li class="dropdown">
+        <a href="#">অধ্যায়সমূহ ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="chapter1.html">অধ্যায় ১: রসায়নের পরিচিতি</a></li>
+          <li><a href="chapter1.html">অধ্যায় ২: ল্যাব নিরাপত্তা</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৩: অ্যাসিড ও ক্ষার</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৪: রাসায়নিক বিক্রিয়া</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৫: পৃথকীকরণ কৌশল</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৬: পরিমাপ</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৭: গ্যাস সূত্র</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৮: পিএইচ পরীক্ষা</a></li>
+          <li><a href="chapter1.html">অধ্যায় ৯: লবণ</a></li>
+          <li><a href="chapter1.html">অধ্যায় ১০: বৈদ্যুত্রাপেক্ষ</a></li>
+          <li><a href="chapter1.html">অধ্যায় ১১: জৈব রসায়ন</a></li>
+          <li><a href="chapter1.html">অধ্যায় ১২: পুনরাবৃত্তি</a></li>
+        </ul>
+      </li>
+   
+      <li><a href="#">ব্লগ</a></li>
+      <li><a href="#">আমাদের সম্পর্কে</a></li>
+         <li><a href="submit_complain.html">অভিযোগ</a></li>
+      <li><a href="#" id="text">লগইন</a></li>
+      <li><a href="#">অ্যাডমিন</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Hero Section with Background Video -->
+  <section class="hero">
+    <video autoplay muted loop playsinline id="bgVideo">
+      <source src="http://localhost/onusiloni/vdo/8579-211655655_large.mp4" type="video/mp4" />
+      
+    </video>
+    <div class="hero-content">
+      <h1>রসায়ন ল্যাব এক্সপেরিমেন্ট অন্বেষণ করুন</h1>
+      <p>নবম-দশম শ্রেণির জন্য ইন্টার‌্যাকটিভ, আকর্ষণীয় ও হাতে-কলমে প্র্যাকটিক্যাল</p>
+      <button class="btn">শেখা শুরু করুন</button>
+    </div>
+  </section>
+
+<section>
+  <div class="statistics">
+    <div class="card-box hint">
+      <h1 class="counter custom-blue" id="institutionCount">--</h1>
+      <h5>প্রতিষ্ঠান সংখ্যা</h5>
+      <div class="hovertxt">ইনস্টিটিউটের সংখ্যা যেখানে ব্যবহারকারী নিজেদের অন্তর্ভুক্ত করেছেন</div>
+    </div>
+    <div class="card-box">
+      <h1 class="counter custom-yellow" id="teacherCount">--</h1>
+      <h5>মোট শিক্ষক</h5>
+    </div>
+    <div class="card-box hint">
+      <h1 class="counter custom-red" id="studentCount">--</h1>
+      <h5>মোট শিক্ষার্থী</h5>
+      <div class="hovertxt">ছাত্র হিসাবে নিবন্ধিত ব্যবহারকারীদের সংখ্যা।</div>
+    </div>
+    <div class="card-box hint">
+      <h1 class="counter custom-green" id="memberCount">--</h1>
+      <h5>মোট সদস্য</h5>
+      <div class="hovertxt">আমাদের সিস্টেমে সমস্ত তালিকাভুক্ত ব্যবহারকারীর সংখ্যা।</div>
+    </div>
+  </div>
+</section>
+
+  
+ 
+
+  
+  <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">আমাদের বৈশিষ্ট্য সমূহ</h2> <br>
+        <p class="section-subtitle">
+          ওয়েব ব্রাউজার ব্যবহার করে শিক্ষার্থীরা যেকোনো অবস্থান থেকে পরীক্ষা-নিরীক্ষা করতে পারে <br> 
+          এবং এই ইন্টার‌্যাক্টিভ প্রযুক্তিগুলি তাদের ও অনন্যভাবে উপস্থাপন বৈজ্ঞানিক ধারণা সহজভাবে তৈরি করে।
+        </p>
+        <div class="features-grid">
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="ভিডিও ও এনিমেশন" />
+            <h3>সম্পূর্ণ ফ্লিড ভিডিও ও এনিমেশন দেখে শেখা</h3>
+            <p>অনুশীলনে রয়েছে ৫০০টিরও বেশি ভিডিও ও এনিমেটেড টিউটোরিয়াল যেখানে রয়েছে প্রাক্টিক্যাল (প্রথম শ্রেণি থেকে দ্বাদশ শ্রেণি) বিজ্ঞানের শিক্ষা, সফটওয়্যার ও ডেমোশাল গাইড।</p>
+          </div>
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1995/1995483.png" alt="নিজেকে যাচাই" />
+            <h3>সিমুলেশনের মাধ্যমে নিজেকে যাচাই করার সুযোগ</h3>
+            <p>এটি ব্যবহারকারীদের স্বাধীনভাবে পরীক্ষা-নিরীক্ষা করার এবং প্রাপ্ত ফলাফলের কার্যকারিতা বুঝতে সাহায্য করে।</p>
+          </div>
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="মূল্যায়ন" />
+            <h3>শিক্ষকদের দ্বারা কার্যকারিতা মূল্যায়নের সুযোগ</h3>
+            <p>এই সিস্টেমটি বিভিন্ন শিক্ষকদের মূল্যায়নের টুলস দেয় যাতে তারা শিক্ষার্থীদের কার্যকারিতা যাচাই করতে পারেন।</p>
+          </div>
+          <div class="feature-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/809/809957.png" alt="কমিউনিটি অভিজ্ঞতা" />
+            <h3>ই-লার্নিং বিজ্ঞান কমিউনিটি প্ল্যাটফর্ম অভিজ্ঞতা নেওয়া</h3>
+            <p>শিক্ষার্থীরা তাদের প্রশ্ন বা সমস্যার ডিটেইল জানাতে পারে ও শিক্ষক বা সহপাঠীরা সহায়তা করতে পারে।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter-section" id="chapterSection" >
+      <h1 class="tothoheading">রসায়ন অধ্যায়সমূহ</h1>
+    
+      <div class="chapter-grid">
+        <!-- Chapter Card -->
+        <a class="chapter-card" href="chapter1.html">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>প্রথম অধ্যায়</h4>
+          <p>প্রথম অধ্যায়: রসায়নের ধারণা<br> (Concept of Chemistry)</p>
+        </a>
+    
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>দ্বিতীয় অধ্যায়</h4>
+          <p>দ্বিতীয় অধ্যায়: পদার্থের অবস্থা <br>(States of Matter)</p>
+        </a>
+    
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>তৃতীয় অধ্যায়</h4>
+          <p>তৃতীয় অধ্যায়: পদার্থের গঠন <br>(Structure of Matter)</p>
+        </a>
+    
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>চতুর্থ অধ্যায়</h4>
+          <p>চতুর্থ অধ্যায়: পর্যায় সারণি <br>(Periodic Table)</p>
+        </a>
+    
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>পঞ্চম অধ্যায়</h4>
+          <p>পঞ্চম অধ্যায়: রাসায়নিক বন্ধন <br>(Chemical Bond)</p>
+        </a>
+    
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>ষষ্ঠ অধ্যায়</h4>
+          <p>ষষ্ঠ অধ্যায়: মোলের ধারণা ও রাসায়নিক গণনা <br>(Concept of Mole and Chemical Calculation)</p>
+        </a>
+      
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>সপ্তম অধ্যায়</h4>
+          <p>সপ্তম অধ্যায়: রাসায়নিক বিক্রিয়া <br>(Chemical Reaction)</p>
+        </a>
+        
+        <a class="chapter-card" href="">
+          <div class="card-img" style="background-image: url('vdo/study.jpg');"></div>
+          <h4>অষ্টম অধ্যায়</h4>
+          <p>অষ্টম অধ্যায়: রসায়ন ও শক্তি <br>(Chemistry and Energy)</p>
+        </a>
+        
+      </div>
+    </div>
+    
+    
+    
+
+    <!-- Student Section -->
+    <div class="hsc-onlines">
+      <div class="hsc-section">
+        <div class="hsc-inner">
+        <div class="hsc-half hsc-image" style="background-image: url('vdo/online.jpg');"></div>
+        <div class="hsc-half hsc-content">
+          <h1 class="hsc-headline hsc-shadow">শেখা হোক ঘরে বসেই</h1>
+          <h3>SSC LAB Online এর মাধ্যমে ঘরে বসে LAB শেখার জন্য শিক্ষার্থীর জন্য রয়েছে-</h3>
+          <ul>
+            <li>শিক্ষার্থী ড্যাশবোর্ড</li>
+            <li>প্রগ্রেস মনিটরিং</li>
+            <li>অধ্যায়ভিত্তিক অনুশীলন</li>
+            <li>শিক্ষার্থী র‍্যাঙ্কিং</li>
+          </ul>
+          <p>সহ আরো অনেক মজার ফিচার্স …</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+ <!-- Teacher Section -->
+<div class="hsc-studybloc">
+  <div class="hsc-section hsc-reverse">
+    <div class="hsc-inner">
+      <div class="hsc-half hsc-content">
+        <h1 class="hsc-headline hsc-shadow">শেখানো এবং মূল্যায়ন হোক ডিজিটাল মাধ্যমে</h1>
+        <h3>SSC LAB Online এর মাধ্যমে যেকোনো জায়গা থেকে LAB শেখানো ও মূল্যায়নের জন্য শিক্ষকের জন্য রয়েছে-</h3>
+        <ul>
+          <li>শিক্ষক ড্যাশবোর্ড</li>
+          <li>গ্রুপ বা ব্যাচ ভিত্তিক মনিটরিং</li>
+          <li>অ্যাসাইনমেন্ট প্রদান ও মূল্যায়ন</li>
+          <li>শিক্ষার্থী রিপোর্ট</li>
+        </ul>
+        <p>সহ আরো অনেক ফিচার্স …</p>
+      </div>
+      <div class="hsc-half hsc-image" style="background-image: url('vdo/study.jpg');"></div>
+    </div>
+  </div>
+</div>
+
+  
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <a href="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbyNcCbsi6N1F_c4Qe7NloBz3BiaMGmLNQ8A&s" alt="Logo" class="footer-logo">
+      </a>
+      <p class="follow-text">যুক্ত থাকুন আমাদের সাথে...</p>
+      <div class="social-icons">
+        <a href=""><img src="http://localhost/onusiloni/vdo/fb.png" alt="Facebook"></a>
+        <a href=""><img src="http://localhost/onusiloni/vdo/yt.png" alt="YouTube"></a>
+        <a href=""><img src="http://localhost/onusiloni/vdo/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <ul class="footer-links">
+        <li><a href="">আমাদের সম্পর্কে</a></li>
+        <li><a href="">আমাদের টিম</a></li>
+        <li><a href="">যোগাযোগ করুন</a></li>
+        <li><a href="">ভার্চুয়াল সিস্টেম</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <p>যোগাযোগ</p>
+      <p><ion-icon name="mail-outline"></ion-icon> 2002019.icte.ac.bd</p>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-credits">
+    <div><a href="https://bdu.ac.bd/"><img src="https://bdu.ac.bd/uploads/settings/17396900755596.png" alt="BDU" class="footer-partner-logo"></a></div>
+    <div>
+      <p>Capstone project by Tarekul Islam and Samiul Khan, Student, EDTECH, BDU.</p>
+      <p>Maintained by <a class="onushilon" href="">অনুশীলন</a></p>
+    </div>
+    <div><a href=""><img src="https://static.vecteezy.com/system/resources/previews/036/494/149/non_2x/education-technology-logo-vector.jpg" alt="" class="footer-partner-logo small"></a></div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 BANGLADESH Digital UNIVERSITY (BDU). All Rights Reserved
+  </div>
+</footer>
+
+
+<!-- Sign In / Sign Up Modal -->
+<div id="authModal" class="modal-container">
+  <div class="modal-box-with-image">
+      <!-- Close Button -->
+      <button class="modal-close" id="closeBtn" aria-label="Close Modal">&times;</button>
+    <div class="modal-left">
+
+      <!-- Login Image -->
+      <img id="loginImage" src="https://cdn.dribbble.com/users/535360/screenshots/2583480/scientists_2.gif" alt="Login Illustration" />
+
+      <!-- Signup Image (initially hidden) -->
+      <img id="signupImage" class="hidden" src="http://localhost/onusiloni/vdo/chatgpt.png" alt="Signup Illustration" />
+    </div>
+
+
+    <!-- Login Form -->
+    <div class="heading" id="loginForm">
+      <h2 class="brand-title">অনুশীলন</h2>
+      <p class="welcome-text">ফিরে আসার জন্য স্বাগতম!</p>
+
+      <div class="divider"><span> ইমেইল দিয়ে লগ ইন করুন</span></div>
+
+      <form>
+        <label for="email">ইমেইল</label>
+        <input type="email" id="email" placeholder="আপনার ইমেইল প্রদান করুন" required />
+
+        <label for="password">পাসওয়ার্ড 
+          <a href="#" class="forgot-pass">পাসওয়ার্ড ভুলে গেছেন?</a>
+        </label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="আপনার পাসওয়ার্ড প্রদান করুন" required />
+          <span class="toggle-password"><i class="fas fa-eye"></i></span>
+        </div>
+
+        <button type="submit" class="login-btn">লগ ইন করুন</button>
+      </form>
+
+      <p class="register-text">অথবা <span id="showSignup">রেজিস্ট্রেশন করুন</span></p>
+    </div>
+
+<!-- Signup Form -->
+<div class="heading hidden" id="signupForm">
+  <h2 class="brand-title">অনুশীলন</h2>
+  <p class="welcome-text">নতুন ব্যবহারকারী হিসাবে নিবন্ধন করুন</p>
+
+  <!-- ✅ Add form tag here -->
+  <form id="signupFormElement">
+
+    <div class="radio-group">
+      <label><input type="radio" name="role" value="student" checked> শিক্ষার্থী</label>
+      <label><input type="radio" name="role" value="teacher"> শিক্ষক</label>
+    </div>
+
+    <div class="modal-right">
+      <label>নাম</label>
+      <input type="text" name="name" placeholder="আপনার নাম প্রদান করুন" />
+    </div>
+
+    <div class="modal-right">
+      <label>ইমেইল</label>
+      <input type="email" name="email" placeholder="আপনার ইমেইল প্রদান করুন" />
+    </div>
+
+    <div class="modal-right">
+      <label>পাসওয়ার্ড</label>
+      <div class="password-wrapper">
+        <input type="password" name="password" placeholder="শক্তিশালী পাসওয়ার্ড ব্যবহার করুন" />
+        <span class="toggle-password"><i class="fas fa-eye"></i></span>
+      </div>
+    </div>
+
+    <div class="modal-right">
+      <label>পাসওয়ার্ড যাচাই</label>
+      <div class="password-wrapper">
+        <input type="password" name="confirmPassword" placeholder="আপনার পাসওয়ার্ড পুনরায় প্রদান করুন" />
+        <span class="toggle-password"><i class="fas fa-eye"></i></span>
+      </div>
+    </div>
+
+    <div class="modal-right">
+      <label>ইন্সটিটিউশনের নাম</label>
+      <input type="text" name="institution" placeholder="আপনার ইন্সটিটিউশনের নাম প্রদান করুন" />
+    </div>
+
+    <!-- ✅ Make sure this is a submit button -->
+    <button type="submit" class="login-btn">নিবন্ধন করুন</button>
+
+    <p class="register-text">অথবা <span id="showLogin">লগ ইন</span></p>
+
+  </form> <!-- ✅ form tag ends here -->
+</div>
+
+
+
+
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* ✨ Global Enhancements */
+:root {
+  --primary-color: #0066ff;
+  --accent-color: #00c897;
+  --bg-color: #f2f6ff;
+  --text-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --gradient-primary: linear-gradient(135deg, #0066ff, #00c897);
+  --gradient-accent: linear-gradient(135deg, #ff4e50, #f9d423);
+  --transition: all 0.3s ease;
+}
+
+/* styles.css */
+
+/* Import Google Font for Bangla */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans Bengali', sans-serif;
+}/* 
+
+body {
+  background-color: #f4f7fb;
+  color: #222;
+  
+}/* 
+
+/* Navigation Bar */
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #002147;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo style 
+.logo {
+  font-size: 3rem; 
+  font-weight: 800;
+  color: #ffc107;
+   white-space: nowrap;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  line-height: 1;
+} */
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffc107;
+  line-height: 1;
+}
+
+/* Nav links wrapper */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav link individual */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffc107;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: Stack nav links vertically on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #013366;
+  border-radius: 6px;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  z-index: 1000;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.2rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #0055aa;
+  color: #ffeb3b;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Common style for all nav links */
+/* Nav links default style */
+.nav-links li a {
+  text-decoration: none;
+  color: white; /* সবার জন্য */
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* Login button override */
+#text {
+  color: black !important; /* Forcefully override white */
+  background-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+}
+
+
+#text:hover {
+  background-color: #ffdb4d;
+  color: #001933;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsive: Mobile Friendly */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #002147;
+    padding-top: 1rem;
+  }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+}
+
+/* 🔹 Section with Glass Effect */
+.section {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  margin-bottom: 50px;
+   margin-top: 40px; /* Navbar থেকে আলাদা করার জন্য */
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+/* 🔹 Heading Underline Animation */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--primary-color);
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+h2:hover::after {
+  width: 120px;
+}
+
+/* 🔹 Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+thead {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+tbody tr {
+  transition: var(--transition);
+}
+
+tbody tr:hover {
+  background-color: #eaf1ff;
+  transform: scale(1.01);
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #eee;
+}
+
+/* 🔹 Buttons & Selects */
+select, button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: var(--transition);
+}
+
+select:hover, button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+button {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #004bb1, #0073ff);
+}
+.logout-container {
+  display: block;
+  margin: 40px auto 0; /* উপরে 40px gap + center */
+  text-align: center;
+}
+
+/* 🔹 Logout Button */
+.logout-btn {
+  background: var(--gradient-accent);
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #f12711, #f5af19);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* 🔹 Scrollbar */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e4eaf1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}

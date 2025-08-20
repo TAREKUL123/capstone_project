@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>অনুশীলনী | অধ্যায় ১</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  
+  
+  <!-- ✅ Navigation Bar -->
+  <nav class="navbar" id="mainNav">
+    <div class="logo">অনুশীলনী</div> 
+    <ul class="nav-links">
+      <li><a href="home.html">হোম</a></li>
+      <li class="dropdown">
+        <a href="#">অধ্যায়সমূহ ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="chapter1.html">অধ্যায় ১: রসায়নের পরিচিতি</a></li>
+          <li><a href="#">অধ্যায় ২: ল্যাব নিরাপত্তা</a></li>
+          <li><a href="#">অধ্যায় ৩: অ্যাসিড ও ক্ষার</a></li>
+          <li><a href="#">অধ্যায় ৪: রাসায়নিক বিক্রিয়া</a></li>
+          <li><a href="#">অধ্যায় ৫: পৃথকীকরণ কৌশল</a></li>
+          <li><a href="#">অধ্যায় ৬: পরিমাপ</a></li>
+          <li><a href="#">অধ্যায় ৭: গ্যাস সূত্র</a></li>
+          <li><a href="#">অধ্যায় ৮: পিএইচ পরীক্ষা</a></li>
+          <li><a href="#">অধ্যায় ৯: লবণ</a></li>
+          <li><a href="#">অধ্যায় ১০: বৈদ্যুত্রাপেক্ষ</a></li>
+          <li><a href="#">অধ্যায় ১১: জৈব রসায়ন</a></li>
+          <li><a href="#">অধ্যায় ১২: পুনরাবৃত্তি</a></li>
+        </ul>
+      </li>
+      <li><a href="#"></a></li>
+      <li><a href="#">ব্লগ</a></li>
+      <li><a href="#">আমাদের সম্পর্কে</a></li>
+      <li><a href="#" id="text">লগইন</a></li>
+      <li><a href="#">অ্যাডমিন</a></li>
+    </ul>
+  </nav>
+
+  <div id="start-screen">
+    <h2>Select Difficulty Level</h2>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <div id="quiz-container" style="display:none;">
+    <div id="timer">⏱️ Time Left: <span id="time">60</span>s</div>
+    <div id="quiz"></div>
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <div class="modal" id="resultModal">
+    <div class="modal-content">
+      <h3>Your Score: <span id="scoreText"></span></h3>
+      <p id="feedback"></p>
+      <button id="restartBtn">Restart</button>
+      <button id="reviewBtn">Review</button>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+<div class="modal" id="reviewModal">
+  <div class="modal-content">
+    <h3>Review Answers</h3> 
+    <div id="reviewContent"></div>
+    <button onclick="closeReview()">Close</button>
+  </div>
+</div>
+
+
+  <script src="quiz.js"></script>
+</body>
+</html>

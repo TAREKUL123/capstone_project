@@ -1,0 +1,506 @@
+/* styles.css */
+
+/* Import Google Font for Bangla */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans Bengali', sans-serif;
+}
+/*
+body {
+ font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  zoom: 1.1;  Zoom for better visibility 
+}*/
+
+/* Navigation Bar */
+/* Navbar container 
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #002147;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}*/
+
+/* Navbar Always Top + Full Width */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #002147;
+  padding: 12px 40px;
+  color: white;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  position: fixed; /* সবসময় উপরে থাকবে */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* উপরের সব কন্টেন্টের উপর */
+}
+
+/* পেজ কন্টেন্টে Navbar height অনুযায়ী gap */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px; /* Navbar height অনুযায়ী space */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  zoom: 1.1;
+}
+/* Logo style 
+.logo {
+  font-size: 3rem; 
+  font-weight: 800;
+  color: #ffc107;
+   white-space: nowrap;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  line-height: 1;
+} */
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffc107;
+  line-height: 1;
+}
+
+/* Nav links wrapper */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav link individual */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  color: #ffc107;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: Stack nav links vertically on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #013366;
+  border-radius: 6px;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  z-index: 1000;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.2rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #0055aa;
+  color: #ffeb3b;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Common style for all nav links */
+/* Nav links default style */
+.nav-links li a {
+  text-decoration: none;
+  color: white; /* সবার জন্য */
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* Login button override */
+#text {
+  color: black !important; /* Forcefully override white */
+  background-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+}
+
+
+#text:hover {
+  background-color: #ffdb4d;
+  color: #001933;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsive: Mobile Friendly */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #002147;
+    padding-top: 1rem;
+  }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+}
+
+
+
+/* 🌌 Background Styling 
+body {
+ 
+}*/
+
+/* 🎯 Start Screen Container */
+#start-screen {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#submitBtn{
+  display: block;
+  width: fit-content; /* jodi width fix korte chan */
+  margin: 0 auto; 
+}
+
+/* ✨ Heading Style */
+#start-screen h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  animation: glow 2s infinite alternate;
+}
+
+/* 🌈 Glow Animation for Heading */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #4facfe, 0 0 20px #4facfe; }
+  to { text-shadow: 0 0 20px #00f2fe, 0 0 40px #00f2fe; }
+}
+
+/* 🔹 Difficulty Dropdown */
+#difficulty {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#difficulty:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#difficulty option {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* 🚀 Start Button */
+#startBtn {
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#startBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 242, 254, 0.6);
+}
+
+/* 🌈 Difficulty Dropdown Enhanced */
+#difficulty {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  appearance: none; /* removes default arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+
+#difficulty:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #00f2fe;
+}
+
+/* 💎 Dropdown Options */
+#difficulty option {
+  background: #1a1a1a;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hover effect for options (works in most modern browsers) */
+#difficulty option:hover {
+  background: #00f2fe;
+  color: #000;
+}
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#timer {
+  text-align: center;
+}
+
+
+
+/* 🔹 Question Box */
+.question {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.question:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+/* 🔹 Buttons - Modern Glass Look */
+button {
+  padding: 12px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+}
+button:active {
+  transform: scale(0.97);
+}
+
+
+/* 🔹 Timer Style */
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  padding: 8px 15px;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(255, 100, 0, 0.4);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+  .question {
+    padding: 15px;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+
+/* 🔹 Overlay */
+/* 🔹 Overlay (Dark + Blur Background) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* darker transparent bg */
+  backdrop-filter: blur(8px); /* smooth blur */
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  animation: fadeIn 0.4s ease-in-out;
+  
+  /* Center modal content */
+align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Glassmorphic Floating Modal Content */
+.modal-content {
+   top: 60px; /* উপরের থেকে দূরত্ব */
+  left: 30%;
+  transform: translateX(-50%); /* শুধু horizontally center */
+
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 20px;
+  width: 85%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-20px);
+  animation: slideUp 0.5s ease forwards;
+  text-align: center;
+}
+
+
+/* 🔹 Timer */
+#timer {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* 🔹 Correct / Incorrect Styling */
+.correct {
+  color: #4ef037;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+/* 🔹 Review Question Styling */
+.review-question {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Smooth Scroll for Long Content */
+#reviewModal {
+  display: none;
+  position: fixed;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🔹 Floating Close/Back Button Style */
+.modal-content button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-content button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
